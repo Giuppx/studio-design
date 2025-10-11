@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* font family */
+    --font-primary: "Helvetica", sans-serif;
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: "Montserrat", sans-serif;
+    --font-tertiary: "Bebas Neue", sans-serif;
+    /* font size */
+    --big-title1: 3.815rem;
+    --big-title2: 3.052rem;
+    --big-title3: 2.441rem;
+    --normal-text: 1rem;
+    --small-text: 0.8rem;
+    /* colors */
+    --section-title-color: #555;
+    --section-subtitle-color: #777;
+    --bg-footer: #aeb1b6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+}
+
+ul {
+    margin: 0;
+    padding: 1rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    line-height: 1.4;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #ccc;
+}
+
+section:first-child {
+    border: none;
+    padding: 2rem 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.section-title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 1.8rem 0;
+    color: var(--section-title-color);
+    font-family: var(--font-tertiary);
+    letter-spacing: 7px;
+}
+
+.section-subtitle {
+    font-size: 1.6rem;
+    color: var(--section-subtitle-color);
+}
+
+.section-cta {
+    margin: 1rem 0;
+    padding: 0.4rem 2rem;
+    background: #8b7d6f;
+    color: white;
+    border: none;
+    font-size: 1rem;
+}
+
+.open-mobile-nav {
+    right: 0 !important;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+/* main header */
+
+#main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: transparent;
+}
+
+.main-header__brand-container {
+    display: block;
+    padding-top: 2.4rem;
+    width: 110px;
+    height: 110px;
+    background: #8b7d6f;
+    border-radius: 0 0 50% 50%;
+    cursor: pointer;
+    box-shadow: 3px 0px 4px rgba(0, 0, 0, 0.6);
+}
+
+.main-header__brand {
+    width: 120px;
+    height: 40px;
+    object-fit: cover;
+    object-position: -8px;
+}
+
+/* toggle */
+
+.main-header__toggle-container {
+    width: 100%;
+    height: 100%;
+    text-align: end;
+}
+
+.main-header__toggle {
+    font-size: 1.4rem;
+    color: aliceblue;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* mobile nav */
+
+.mian-nav.main-nav--mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 60vw;
+    height: 100vh;
+    background: var(--bg-footer);
+    font-size: 1.2rem;
+    transition: right 0.5s ease-out;
+    z-index: 2;
+}
+
+.main-nav__list-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 100%;
+}
+
+.main-nav__list-links li {
+    padding: 0.7rem 0;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.main-nav__list-links li a {
+    /* text-decoration: none; */
+    color: white;
+}
+
+.main-nav {
+    display: none;
+
+}
+
+
+.main-header__contacts-container {
+    display: none;
+}
+
+
+/* hero */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 58vh;
+    font-family: var(--font-secondary);
+    padding: 1rem;
+    padding-top: 6.875rem;
+    background: url("../assets/images/hero_background.jpg") 64%/ cover no-repeat;
+}
+
+#hero h1,
+#hero p {
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+#hero h1 {
+    max-width: 383px;
+    min-width: 200px;
+    padding-top: 2.4rem;
+    padding-bottom: 0.8rem;
+    font-size: 3.5rem;
+    font-weight: 200;
+}
+
+#hero p {
+    font-family: var(--font-primary);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#hero .hero__cta {
+    display: none;
+}
+
+#hero .hero__info {
+    display: none;
+}
+
+#hero .hero__socials {
+    display: none;
+}
+
+/* section catalog */
+
+.catalog__list {
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.catalog__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalog__item a {
+    display: block;
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.catalog__image-container {
+    width: 78%;
+    height: 36vh;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.catalog__image {
+    width: 100%;
+    height: 100%;
+}
+
+/* section about */
+
+#about {
+    text-align: start;
+}
+
+.about__image-container {
+    width: 90%;
+    height: 50%;
+}
+
+.about__image-container img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+#about .about__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1.2rem;
+}
+
+#about .section-title {
+    margin-bottom: 0;
+}
+
+#about .section-subtitle {
+    margin: 2.2rem 0;
+    margin-top: 0;
+}
+
+#about .about__text p {
+    margin: 1rem 0;
+    margin-top: 0;
+
+}
+
+
+/* recent work */
+
+.recent-works__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1.2rem;
+}
+
+.recent-works__text .section-title {
+    margin: 0;
+}
+
+.recent-works__text .section-cta {
+    display: none;
+}
+
+.recent-works__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.recent-works__image-container {
+    width: 90%;
+    height: 36vh;
+    margin: 1rem 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.recent-works__image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* reviews */
+
+
+.review-item div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.review-item__image {
+    width: 80%;
+    height: 30vh;
+}
+
+.review-item__imgage--1 {
+    background: url("../assets/images/zeelool-glasses-7qsdLxXtJfg-unsplash.jpg") 0% 20% /cover no-repeat;
+}
+
+.review-item__imgage--2 {
+    background: url("../assets/images/ernest-flowers-nd62fu5GK1w-unsplash.jpg") 0% 20% /cover no-repeat;
+}
+
+.customer-name {
+    margin-bottom: 0;
+}
+
+.customer-review {
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* footer */
+
+#main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+    color: white;
+    background: var(--bg-footer);
+}
+
+.main-footer__brand-container {
+    display: block;
+    width: 100%;
+    height: 12vh;
+    margin-bottom: 1rem;
+}
+
+.main-footer__brand-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -26px center;
+    cursor: pointer;
+}
+
+.main-footer__nav {
+    display: none;
+}
+
+.main-footer__legal-container {
+    text-align: center;
+    color: inherit;
+    order: 2;
+}
+
+.copyright {
+    margin-top: 0;
+
+}
+
+.main-footer__legal-container a {
+    color: inherit;
+    display: block;
+    text-align: center;
+}
+
+.main-footer__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.1rem;
+}
+
+.main-footer__contacts {
+    text-align: center;
+    padding: 1rem 0;
+    padding-top: 0;
+    order: 1;
+}
+
+.main-footer__socials {
+    display: inherit;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    order: 3;
+}
+
+.main-footer__socials a {
+    color: white;
+}

@@ -651,7 +651,7 @@ section:first-child {
         flex-direction: column;
         justify-content: end;
         width: 28%;
-        padding: 0;
+        padding: 0 0.8rem;
         padding-left: 6.4rem;
     }
 
@@ -680,49 +680,48 @@ section:first-child {
     /* customer reviews */
 
     #customers-reviews {
+        display: flex;
+        justify-content: center;
         padding-right: 0;
     }
 
     .reviews {
-        width: 70%;
+        width: 60%;
         display: flex;
-        justify-content: center;
-        padding-right: 0;
-        padding-left: 3rem;
+        padding: 1rem 0;
     }
 
-    .review-item div {
+    .review-item>div {
         width: 100%;
-        padding: 0 1rem;
-        flex-direction: row;
+        padding: 0 0.8rem;
+        flex-direction: column;
+        align-items: start;
     }
 
     .review-item__image {
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         border-radius: 0px;
     }
 
     .review-item__image.review-item__imgage--1 {
-        background: url("../assets/images/zeelool-glasses-7qsdLxXtJfg-unsplash.jpg") center /cover no-repeat;
+        background: url("../assets/images/zeelool-glasses-7qsdLxXtJfg-unsplash.jpg") center bottom 80% /cover no-repeat;
     }
 
     .review-item__image.review-item__imgage--2 {
-        background: url("../assets/images/ernest-flowers-nd62fu5GK1w-unsplash.jpg") center /cover no-repeat;
+        background: url("../assets/images/ernest-flowers-nd62fu5GK1w-unsplash.jpg") center bottom 88% /cover no-repeat;
     }
 
-    div .review-item__text {
+    .review-item__text {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
+        padding: 0 1rem;
         padding-right: 0;
     }
 
     .customer-review {
         padding: 0;
         padding-top: 1rem;
-        text-align: start;
     }
 
 

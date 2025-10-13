@@ -664,6 +664,14 @@ section:first-child {
         display: block;
         cursor: pointer;
         margin-bottom: 0;
+        border: 2px solid #d16c20;
+        transition: all 0.4s ease-out;
+        text-transform: uppercase;
+    }
+
+    .recent-works__text .section-cta:hover {
+        background: none;
+        color: #d16c20;
     }
 
     .recent-works__images {
@@ -674,6 +682,12 @@ section:first-child {
     .recent-works__image-container {
         height: 58vh;
         margin: 0 0.4rem;
+        cursor: pointer;
+        transition: transform 0.4s ease-out;
+    }
+
+    .recent-works__image-container:hover {
+        transform: scale(1.2);
     }
 
 

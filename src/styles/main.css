@@ -109,6 +109,7 @@ section:first-child {
 .main-header__brand-container {
     display: inline-block;
     width: 84%;
+    max-width: 140px;
     height: 10%;
 }
 

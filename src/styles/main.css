@@ -22,6 +22,8 @@
 
 body {
     margin: 0;
+    font-size: 1rem;
+    font-family: var(--font-secondary);
 }
 
 ul {
@@ -52,20 +54,20 @@ section:first-child {
 
 .section-title {
     font-family: var(--font-primary);
-    font-size: 1.5rem;
-    margin: 1.8rem 0;
+    font-size: 2rem;
+    margin: 1.4rem 0;
     color: var(--section-title-color);
     text-transform: uppercase;
 }
 
 .section-subtitle {
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     font-size: 1.2rem;
     color: var(--section-subtitle-color);
 }
 
 .section-cta,
-#hero .hero__cta {
+.hero__cta {
     background: goldenrod;
     padding: 0.4rem 1.4rem;
     border: 1px solid goldenrod;
@@ -184,21 +186,27 @@ section:first-child {
     background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../assets/images/hero_background.jpg") left 78% center / cover no-repeat;
 }
 
-#hero h1 {
-    text-align: center;
+.hero__text-container {
     width: 100%;
-    margin: 1rem 0;
-    font-weight: 100;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__text-container .hero__title {
+    font-size: calc(var(--big-title1) - 1.6rem);
     color: #FFF;
-    font-size: calc(var(--big-title1) - 2rem);
     text-transform: uppercase;
 }
 
+.hero__text-container .hero__subtitle {
+    display: none;
 
-#hero>div,
-#hero p,
-#hero .hero__info,
-#hero .hero__socials {
+}
+
+.hero__info-container {
     display: none;
 }
 
@@ -219,13 +227,13 @@ section:first-child {
     display: block;
     padding: 1.1rem 0;
     color: #444;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-family: var(--font-secondary);
 }
 
 .catalog__image-container {
     width: 87%;
+    max-width: 260px;
     height: 40vh;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
@@ -254,7 +262,7 @@ section:first-child {
     height: 100%;
 }
 
-#about .about__text {
+#about .about__text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,19 +286,14 @@ section:first-child {
 
 /* recent work */
 
-.recent-works__text {
+.recent-works__text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
 }
 
-.recent-works__text p {
-    text-align: center;
-    margin-top: 0;
-}
-
-.recent-works__text .section-cta {
+.recent-works__text-container .section-cta {
     margin: 1rem 0;
 }
 
@@ -303,6 +306,7 @@ section:first-child {
 
 .recent-works__image-container {
     width: 100%;
+    max-width: 260px;
     height: 40vh;
     margin: 1rem 0;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
@@ -334,11 +338,11 @@ section:first-child {
     border-radius: 50%;
 }
 
-.review-item__imgage--1 {
+.review-item__image--1 {
     background: url("../assets/images/zeelool-glasses-7qsdLxXtJfg-unsplash.jpg") 0% 20% /cover no-repeat;
 }
 
-.review-item__imgage--2 {
+.review-item__image--2 {
     background: url("../assets/images/ernest-flowers-nd62fu5GK1w-unsplash.jpg") 0% 20% /cover no-repeat;
 }
 
@@ -441,7 +445,6 @@ section:first-child {
     .main-header__brand-container {
         max-width: 190px;
         min-width: 180px;
-
     }
 
     .main-header__brand {
@@ -456,28 +459,35 @@ section:first-child {
     /* hero */
 
     #hero {
-        padding: 1rem 2rem;
-        align-items: start;
-        justify-content: end;
+        height: 80vh;
+        align-items: center;
+        justify-content: center;
         background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../assets/images/hero_background.jpg") right 20% bottom 24% / cover no-repeat;
     }
 
+    /* #hero .hero__text {
+        flex-direction: column;
+    } */
+
     #hero h1 {
-        font-size: 5.7rem;
+        text-align: unset;
+        width: auto;
+        font-size: var(--big-title1);
     }
 
     #hero p {
         display: block;
         color: white;
         font-family: var(--font-primary);
-        font-size: 1.5rem;
+        font-size: var(--big-title3);
         margin-bottom: 1rem;
         margin-top: 0;
     }
 
     #hero div {
-        width: 100%;
         display: flex;
+        width: 100%;
+        align-self: end;
     }
 
     #hero .hero__info {

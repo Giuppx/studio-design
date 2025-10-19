@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Studio Design è un’azienda con 15 anni di esperienza nel mercato della progettazione, produzione e vendita di arredamento di alta qualità. Con oltre 4.000 progetti realizzati ogni anno in Italia e all’estero, unisce artigianalità, innovazione e design d’eccellenza. Riconosciuta con numerosi premi del settore, è un punto di riferimento per chi cerca soluzioni d’arredo uniche, curate in ogni dettaglio." />
+    <!-- imposta modalità chiara -->
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#FFF">
     <!-- import fontaewsome -->
     <script src="https://kit.fontawesome.com/fc254ec4ed.js" crossorigin="anonymous"></script>
     <!-- import src/main.css -->
@@ -59,10 +62,12 @@
     </header>
     <!-- hero -->
     <div id="hero">
-        <h1 class="hero__title"><strong>Studio Design</strong></h1>
-        <p class="hero__subtitle">Arredamento di qualità</p>
-        <button class="hero__cta">Ordina ora</button>
-        <div>
+        <div class="hero__text-container">
+            <h1 class="hero__title"><strong>Studio Design</strong></h1>
+            <p class="hero__subtitle">Arredamento di qualità</p>
+            <button class="hero__cta">Ordina ora</button>
+        </div>
+        <div class="hero__info-container">
             <ul class="hero__info">
                 <li>15 Anni sul mercato</li>
                 <li>+4000 Progetti</li>
@@ -120,12 +125,12 @@
                 </li>
             </ul>
         </section>
-        <section id="about" class="section-highlight">
+        <section id="about">
             <div class="about__image-container">
                 <img src="src/assets/images/chi-siamo-design.jpg"
                     alt="stanza dal deign moderno realizzata da studio deisgn">
             </div>
-            <div class="about__text">
+            <div class="about__text-container">
                 <h3 class="section-title">Chi siamo</h3>
                 <h4 class="section-subtitle">Progettiamo ogni dettaglio.</h4>
                 <p>Ogni anno l’azienda realizza circa <b>4000 progetti</b> in Italia e nel mondo!</p>
@@ -138,7 +143,7 @@
             </div>
         </section>
         <section id="recent-works">
-            <div class="recent-works__text">
+            <div class="recent-works__text-container">
                 <h3 class="section-title">
                     Ultimi lavori
                 </h3>
@@ -148,7 +153,7 @@
                 </p>
                 <button class="section-cta">Tutti i lavori</button>
             </div>
-            <div class="recent-works__images">
+            <div class="recent-works__images-container">
                 <div class="recent-works__image-container"><img src="src/assets/images/ultimi-lavori-soggiorno.jpg"
                         alt="un recente lavoro di deisign per soggiorno moderno, con colorazione grigia"
                         class="recent-works__image"></div>
@@ -163,7 +168,7 @@
             <ul class="reviews">
                 <li class="review-item">
                     <div>
-                        <div class="review-item__image review-item__imgage--1"></div>
+                        <div class="review-item__image review-item__image--1"></div>
                         <div class="review-item__text">
                             <h3 class="customer-name">Mikhail Palimarets</h3>
                             <i class="customer-review">
@@ -174,7 +179,7 @@
                 </li>
                 <li class="review-item">
                     <div>
-                        <div class="review-item__image review-item__imgage--2"></div>
+                        <div class="review-item__image review-item__image--2"></div>
                         <div class="review-item__text">
                             <h3 class="customer-name">Amil Rakhimov</h3>
                             <i class="customer-review">
@@ -193,9 +198,13 @@
             <img src="src/assets/images/studio-design-logo.png" alt="Studio Design - Arredamento di alta qualità">
         </a>
         <div class="main-footer__legal-container">
-            <p class="copyright">&copy; 2025 Studio Design. Tutti i diritti riservati</p>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Termini e Condizioni</a>
+            <div class="copyright">
+                <p class="copyright">&copy; 2025 Studio Design. Tutti i diritti riservati</p>
+            </div>
+            <div class="privacy-terms">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Termini e Condizioni</a>
+            </div>
         </div>
 
         <nav class="main-footer__nav">

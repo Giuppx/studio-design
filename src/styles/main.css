@@ -631,7 +631,11 @@ section:first-child {
 
     section {
         border: none;
-        margin: 1.4rem 0;
+        padding: 9rem 1.1rem;
+    }
+
+    #main-header {
+        padding: 0 1rem;
     }
 
     .main-header__toggle-container {
@@ -674,11 +678,24 @@ section:first-child {
 
     /* hero */
 
+    #hero {
+        height: 100vh;
+        background-position: left -30% bottom 38%;
+    }
+
+    .hero__text-container .hero__title {
+        font-size: 5rem;
+    }
+
     /* catalog */
 
     section#catalog {
         justify-content: flex-start;
         align-items: start;
+    }
+
+    #catalog .section-title {
+        padding-left: 7%;
     }
 
     .catalog__list {
@@ -688,8 +705,9 @@ section:first-child {
     }
 
     .catalog__image-container {
-        width: 16rem;
-        margin: 0 1rem;
+        width: 18rem;
+        height: 60vh;
+        margin: 0 0.8rem;
     }
 
     .catalog__image {
@@ -699,19 +717,19 @@ section:first-child {
 
     /* about  */
 
-    section#about {
-        justify-content: flex-start;
-    }
+
 
     #about {
+        padding: 0 1rem;
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
     }
 
     .about__image-container {
         display: flex;
-        height: 70vh;
-        width: 50%;
+        height: 80vh;
+        width: 40%;
         max-width: unset;
     }
 
@@ -720,26 +738,26 @@ section:first-child {
         height: unset;
     }
 
-    #about .about__text {
-        width: 40%;
+    #about .about__text-container {
+        align-items: start;
+        width: 50%;
     }
 
     /* recent works */
 
     #recent-works {
-        display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: start;
+        align-items: start;
     }
 
     button.section-cta.section-cta--mobile {
         display: none;
     }
 
-    .recent-works__text {
-        display: flex;
-        flex-direction: column;
-        padding-right: 0;
+    .recent-works__text-container {
+        display: block;
+
     }
 
     .recent-works__text .section-title {
@@ -767,7 +785,7 @@ section:first-child {
         color: #d16c20;
     }
 
-    .recent-works__images {
+    .recent-works__images-container {
         width: 100%;
         flex-direction: row;
     }
@@ -811,12 +829,12 @@ section:first-child {
         border-radius: 0px;
     }
 
-    .review-item__image.review-item__imgage--1 {
+    .review-item__image.review-item__image--1 {
         background: url("../assets/images/zeelool-glasses-7qsdLxXtJfg-unsplash.jpg") center bottom 80% /cover no-repeat;
     }
 
-    .review-item__image.review-item__imgage--2 {
-        background: url("../assets/images/ernest-flowers-nd62fu5GK1w-unsplash.jpg") center bottom 88% /cover no-repeat;
+    .review-item__image.review-item__image--2 {
+        background: url("../assets/images/ernest-flowers-nd62fu5GK1w-unsplash.jpg") center bottom 88%/cover no-repeat;
     }
 
     .review-item__text {
